@@ -55,21 +55,31 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Royal_Hall\Scripts\LayerCullDistances.cs" />
     <Compile Include="Assets\Scripts\PlayerCam.cs" />
+    <Compile Include="Assets\Reversed Interactive\The Portal Collection\Scripts\SimpleCameraControllerPortals.cs" />
     <Compile Include="Assets\ShowFPS.cs" />
     <Compile Include="Assets\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Royal_Hall\Scripts\QualitySettingPostprocessProfileSwitch.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
-    <Compile Include="Assets\Reversed Interactive\The Portal Collection\Scripts\SimpleCameraControllerPortals.cs" />
+    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Scripts\FloatingController.cs" />
+    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Demo\DemoController.cs" />
+    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Scripts\LanternController.cs" />
+    <Compile Include="Assets\WrapToLevel.cs" />
+    <Compile Include="Assets\ThirdPersonCam.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Assets Charles\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\Firefly.shader" />
+     <None Include="Assets\Assets Charles\WorldMaterialsFree\Shaders\WorldMatHDRPFree.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\Alien.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\Water.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\UnityStandardParticleShadow.cginc" />
+     <None Include="Assets\Assets Charles\WorldMaterialsFree\Shaders\WorldMatLiteFree.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\Acid.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\UnityStandardParticles.cginc" />
      <None Include="Assets\Royal_Hall\Art\Shaders\AlienMetal.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\CollectShadowWaterCustom.shader" />
+     <None Include="Assets\Assets Charles\WorldMaterialsFree\Shaders\WorldMatFree.shader" />
+     <None Include="Assets\Assets Charles\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Basic.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\WaterX.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\Rock.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\EyeLash.shader" />
@@ -87,10 +97,12 @@
      <None Include="Assets\Royal_Hall\Art\Shaders\FrostedGlass.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\WaterShadow.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\Swish.shader" />
+     <None Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\ReadMe.txt" />
      <None Include="Assets\Royal_Hall\Art\Shaders\EnergyCore.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\DepthOnly.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\Respawn.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\SculptedHair.shader" />
+     <None Include="Assets\Assets Charles\WorldMaterialsFree\Shaders\WorldMatURPFree.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\Shield.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\ToonSkin.shader" />
      <None Include="Assets\Royal_Hall\Art\Shaders\StandardAlphaFade.shader" />

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: b9d7232933e19164eb09b96ec6063d13
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/lvl_henri_gagnon.unity
+    guid: 442d29a63f98fa14487de33ae10b1a55
+  - enabled: 1
+    path: Assets/Scenes/Desert_Level.unity
+    guid: a04dc72e1f84ec34d8c0b07645481ca1
   m_configObjects: {}
