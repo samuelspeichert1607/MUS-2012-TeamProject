@@ -12,7 +12,7 @@ public class WrapToLevel : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            SceneManager.LoadScene(LevelToWrap, LoadSceneMode.Additive);
+            SceneManager.LoadScene(LevelToWrap, LoadSceneMode.Single);
             Destroy(collision.gameObject);
         }
     }

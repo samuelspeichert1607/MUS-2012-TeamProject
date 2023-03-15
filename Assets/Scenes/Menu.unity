@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Titre
+  m_Text: Momie inc
 --- !u!222 &494678204
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e6dfe9bdd4816458ab9d4766e5b4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: SampleScene
+  sceneName: lvl_henri_gagnon
 --- !u!1 &1047095569
 GameObject:
   m_ObjectHideFlags: 0

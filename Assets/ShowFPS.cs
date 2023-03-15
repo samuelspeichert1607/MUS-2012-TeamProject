@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class ShowFPS : MonoBehaviour
 {
-    public Text fpsText;
-    public float deltaTime;
+    private Text fpsText;
+    private float deltaTime;
     
     private void Start()
     {
@@ -15,6 +15,6 @@ public class ShowFPS : MonoBehaviour
     {
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
         float fps = 1.0f / deltaTime;
-        fpsText.text = Mathf.Ceil(fps).ToString();
+        fpsText.text = "FPS : " + Mathf.Ceil(fps).ToString();
     }
 }

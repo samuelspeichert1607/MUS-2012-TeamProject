@@ -52,19 +52,22 @@
     <UnityVersion>2020.1.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Scripts\FloatingController.cs" />
+    <Compile Include="Assets\ThirdPersonCam.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Royal_Hall\Scripts\LayerCullDistances.cs" />
     <Compile Include="Assets\Scripts\PlayerCam.cs" />
     <Compile Include="Assets\Reversed Interactive\The Portal Collection\Scripts\SimpleCameraControllerPortals.cs" />
+    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Demo\DemoController.cs" />
+    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Scripts\LanternController.cs" />
     <Compile Include="Assets\ShowFPS.cs" />
     <Compile Include="Assets\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Royal_Hall\Scripts\QualitySettingPostprocessProfileSwitch.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
-    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Scripts\FloatingController.cs" />
-    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Demo\DemoController.cs" />
-    <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Scripts\LanternController.cs" />
     <Compile Include="Assets\WrapToLevel.cs" />
-    <Compile Include="Assets\ThirdPersonCam.cs" />
+    <Compile Include="Assets\PartitionCounter.cs" />
+    <Compile Include="Assets\GetCollectible.cs" />
+    <Compile Include="Assets\InBetweenScenesManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Assets Charles\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />
@@ -713,6 +716,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="FMODUnity.csproj">
+      <Project>{8CB5E0C6-DAC5-7099-0CC6-7F2FDF050ADD}</Project>
+      <Name>FMODUnity</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnityResonance.csproj">
+      <Project>{217B3F13-5087-2B06-50AF-2B9283A108AC}</Project>
+      <Name>FMODUnityResonance</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnityResonanceEditor.csproj">
+      <Project>{33ACC88E-BB7A-D372-0DB5-C1B4FC413B13}</Project>
+      <Name>FMODUnityResonanceEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnityEditor.csproj">
+      <Project>{2E76646D-C221-B8BB-786F-BC535EA3283E}</Project>
+      <Name>FMODUnityEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
