@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using UnityEngine;
 
 public class ThirdPersonCam : MonoBehaviour
 {
@@ -7,8 +8,46 @@ public class ThirdPersonCam : MonoBehaviour
     public Transform player;
     public Transform playerObj;
     public Rigidbody rb;
+    private CinemachineFreeLook cinemachineFreeLook;
 
     public float rotationSpeed;
+
+    private void Awake()
+    {
+        cinemachineFreeLook = GetComponent<CinemachineFreeLook>();
+
+        if (player == null)
+        {
+            player = GameObject.Find("Player(Clone)").transform;
+
+            if (orientation == null)
+            {
+                orientation = GameObject.Find("Orientation").transform;
+            }
+
+            if (rb == null)
+            {
+                rb = player.GetComponent<Rigidbody>();
+            }
+
+            if(cinemachineFreeLook.Follow == null)
+            {
+                cinemachineFreeLook.Follow = player;
+            }
+
+            if (cinemachineFreeLook.LookAt == null)
+            {
+                cinemachineFreeLook.LookAt = player;
+            }
+
+            if (playerObj == null)
+            {
+                playerObj = GameObject.Find("PlayerObj").transform;
+            }
+        }
+        
+    }
+
 
     private void Start()
     {

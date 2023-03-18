@@ -9,4 +9,9 @@ public class MenuButtons : MonoBehaviour
     public void Play(){
 		SceneManager.LoadScene(sceneName);
 	}
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

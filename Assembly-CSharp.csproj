@@ -52,12 +52,15 @@
     <UnityVersion>2020.1.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\InBetweenScenesManager.cs" />
     <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Scripts\FloatingController.cs" />
+    <Compile Include="Assets\PartitionCounter.cs" />
     <Compile Include="Assets\ThirdPersonCam.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Royal_Hall\Scripts\LayerCullDistances.cs" />
     <Compile Include="Assets\Scripts\PlayerCam.cs" />
     <Compile Include="Assets\Reversed Interactive\The Portal Collection\Scripts\SimpleCameraControllerPortals.cs" />
+    <Compile Include="Assets\GetCollectible.cs" />
     <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Demo\DemoController.cs" />
     <Compile Include="Assets\Assets Charles\@PaulosCreations\FloatingPots\Scripts\LanternController.cs" />
     <Compile Include="Assets\ShowFPS.cs" />
@@ -65,9 +68,9 @@
     <Compile Include="Assets\Royal_Hall\Scripts\QualitySettingPostprocessProfileSwitch.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
     <Compile Include="Assets\WrapToLevel.cs" />
-    <Compile Include="Assets\PartitionCounter.cs" />
-    <Compile Include="Assets\GetCollectible.cs" />
-    <Compile Include="Assets\InBetweenScenesManager.cs" />
+    <Compile Include="Assets\PlayVoices.cs" />
+    <Compile Include="Assets\Scripts\FootStepHandler.cs" />
+    <Compile Include="Assets\DontDestroyOnLoad.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Assets Charles\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />

@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     private bool grounded;
 
+    private Animator animator;
+    private int parameterSpeed = Animator.StringToHash("Speed");
+
     public Transform orientation;
 
     private float horizontalInput;
@@ -38,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -78,6 +82,9 @@ public class PlayerMovement : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
+
+
+        animator.SetFloat(parameterSpeed, horizontalInput);
     }
 
     private void MovePlayer()
@@ -92,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
         // in air
         else if (!Grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+
+
     }
 
     private void SpeedControl()
@@ -113,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
+
     private void ResetJump()
     {
         readyToJump = true;
