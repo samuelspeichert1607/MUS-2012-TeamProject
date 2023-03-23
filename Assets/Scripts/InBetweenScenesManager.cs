@@ -1,20 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InBetweenScenesManager : MonoBehaviour
 {
-    private bool spawnOnce = false;
+    public static GameObject Instance { get; private set; }
 
-
-    [SerializeField]
-    private Vector3 startPositionEntreeSHG = new Vector3();
-
-    public Vector3 startPositionEntreeDesert = new Vector3();
-    [SerializeField]
-    private Vector3 startPositionSortieDesert = new Vector3();
-
-
+    private static bool spawnOnce = false;
+    
     [SerializeField]
     private GameObject player;
 
@@ -22,11 +13,13 @@ public class InBetweenScenesManager : MonoBehaviour
     private GameObject canvas;
 
     [SerializeField]
-    private GameObject CMFreeLook1;
+    private GameObject CMFreeLook;
 
     [SerializeField]
     private GameObject CameraHolder;
-
+    
+    [SerializeField]
+    private GameObject ItemDatabase;
 
     private void Awake()
     {
@@ -35,10 +28,20 @@ public class InBetweenScenesManager : MonoBehaviour
         if (!spawnOnce)
         {
             Instantiate(player);
-            Instantiate(CMFreeLook1);
-            Instantiate(CameraHolder);
             Instantiate(canvas);
+            Instantiate(CMFreeLook);
+            Instantiate(CameraHolder);
+            Instantiate(ItemDatabase);
             spawnOnce = true;
+        }
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = gameObject;
         }
     }
 

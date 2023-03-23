@@ -8,17 +8,22 @@ public class PlayVoices : MonoBehaviour
 
     private float timePassed;
     private Random random;
-    
+    float randomTime;
+
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         timePassed = 0f;
+
+        randomTime = Random.Range(3, 7);
     }
     
     private void Update()
     {
         timePassed += Time.deltaTime;
-        if (timePassed > 3f)
+
+        if (timePassed > randomTime)
         {
             int randomRange = Random.Range(0, voiceClips.Length);
             audioSource.clip = voiceClips[randomRange];
