@@ -37,6 +37,7 @@ public class FootStepHandler : MonoBehaviour
                 break;
         }
 
+        audioSource.enabled = false;
         ///InvokeRepeating("PlayStepsSounds", 0.0f, 2000f);
     }
 
@@ -47,16 +48,15 @@ public class FootStepHandler : MonoBehaviour
 
         int randomSoundIndex = Random.Range(0, currentFootstepSounds.Length - 1);
 
-        audioSource.clip = currentFootstepSounds[randomSoundIndex];
 
         if (speed > 0 && isGrounded)
         {
             audioSource.mute = false;
             audioSource.pitch = speed / normalSpeed;
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
+            audioSource.enabled = true;
+            audioSource.clip = currentFootstepSounds[randomSoundIndex];
+            audioSource.Play();
+            audioSource.enabled = false;
         }
         else
         {
