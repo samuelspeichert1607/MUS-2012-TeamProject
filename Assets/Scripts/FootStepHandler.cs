@@ -36,6 +36,8 @@ public class FootStepHandler : MonoBehaviour
                 currentFootstepSounds = footstepSoundHenriGagnon;
                 break;
         }
+
+        ///InvokeRepeating("PlayStepsSounds", 0.0f, 2000f);
     }
 
     private void Update()
@@ -51,8 +53,10 @@ public class FootStepHandler : MonoBehaviour
         {
             audioSource.mute = false;
             audioSource.pitch = speed / normalSpeed;
-            //audioSource.Play();
-            Invoke("PlaySound", randomSoundIndex);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
         }
         else
         {
@@ -60,10 +64,10 @@ public class FootStepHandler : MonoBehaviour
         }
     }
 
-
-    void PlaySound()
+    private void PlayStepsSounds()
     {
-        Debug.Log("Hello!");
-        //audioSource.Play();
+        int random = Random.Range(0, currentFootstepSounds.Length);
+        audioSource.clip = currentFootstepSounds[random];
+        audioSource.Play();
     }
 }
