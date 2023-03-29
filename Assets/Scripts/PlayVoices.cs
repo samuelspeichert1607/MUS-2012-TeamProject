@@ -16,7 +16,7 @@ public class PlayVoices : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         timePassed = 0f;
 
-        randomTime = Random.Range(3, 7);
+        randomTime = Random.Range(7, 12);
     }
     
     private void Update()

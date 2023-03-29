@@ -51,6 +51,7 @@ MonoBehaviour:
   canvas: {fileID: 5825316577093568748, guid: 15ad85a4cd367b54cac552410c253794, type: 3}
   CMFreeLook: {fileID: 7018274729460044080, guid: e8351d42ae32d754ebc9c20eb03d137a, type: 3}
   CameraHolder: {fileID: 8218044291394404913, guid: 3383a6dadc7b342458f6c65f89c4f62c, type: 3}
+  ItemDatabase: {fileID: 8256716621171977557, guid: 7c706eaf7ae305c4f92ffae62ac081d8, type: 3}
 --- !u!114 &1398084853280274983
 MonoBehaviour:
   m_ObjectHideFlags: 0

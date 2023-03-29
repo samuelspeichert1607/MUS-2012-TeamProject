@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Desert_Level.unity
     guid: a04dc72e1f84ec34d8c0b07645481ca1
+  - enabled: 1
+    path: Assets/Scenes/Space_Level.unity
+    guid: 221c12fe27f35944b9ef272682fc07f3
   m_configObjects: {}

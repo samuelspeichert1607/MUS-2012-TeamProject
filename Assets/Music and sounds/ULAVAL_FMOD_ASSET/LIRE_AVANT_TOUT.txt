@@ -1,0 +1,27 @@
+Salut SAM !
+
+D'ABORD : Les assets sonores sont normalisés à 0dB, baisser le niveau de chaques éléments à au moins -14dB (ou de 50%).
+
+Évidemment que l'équilibre entre les sources sonores ne sera pas parfaite, tu peux ajuster à ton goût. Mieux vaut agir à la baisse la majorité du temps (Si la foule trop forte, descend le volume de la foule et ne monte pas le son des voix individuels).
+
+
+Logique sonore et placement :
+
+Salle Henri-Gagnon :
+
+- Place "env_hg_crowdnoise_1" comme bruit de fond dans la foule qui doit vraiment occupé tout l'espace SPECTATEUR. On devrait pouvoir l'entendre sur la scène avec une légère atténuation. Le Linear Rolloff devrait faire. MIN/MAX DISTANCE selon la distance de la scène. Le son ne devrait pas être trop aggressant non plus, on devrait aussi facilement percevoir le son du piano.
+
+- Tu peux continuer à ajouter des fichiers "crowd_talking" sur différents spectateurs. Il faudrait qu'un à deux spectateurs crie une insulte au 10-15 secondes. ROLLOFF MODE : LINEAR.  la DISTANCE est basé sur la perception du son sur la scène. Les sons doivent se fondre dans "crowdnoise_1".
+
+- Pour ce qui est de la progression selon les partitions : de 1 à 4, le volume du bruit de fond devrait diminuer expentionellement (disons que c'est drastique au premier pour arriver à 0dB à 4 partition). Pour la foule qui parle, elle pourrait crier qu'une fois par 30 secondes après 1 partition, jusqu'à 1 minutes à 4 partitions, puis les applaudissements à la 5 partitions.
+
+
+-Il y aura PO et le piano sur scène
+
+-On ne devrait pas entendre PO de très loin que près de lui et ne devrait pas venir camouflé aucun autre son de la pièce. Ses pleurs devraient se succéder quand même rapidement (max 4 secondes avant un autre pleure.
+
+-Le piano pourra être entendu partout dans la salle. Sa distance devrait être placé PRIORITY = 0.
+
+-Le portail pourrait se trouver dans l'arrière scène. On ne l'entend pas de très loin mais devient clairement audible quand on est près de lui. S'arranger pour que les autres sources audios (sauf la musique)n'atteignent pas cette zone.
+
+
