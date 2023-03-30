@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayVoices : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class PlayVoices : MonoBehaviour
     private AudioSource audioSource;
 
     private float timePassed;
-    private Random random;
+    //private Random random;
     float randomTime;
 
 
@@ -15,11 +16,17 @@ public class PlayVoices : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         timePassed = 0f;
-
-        randomTime = Random.Range(7, 12);
+        //randomTime = Random.Range(7, 12);
     }
-    
-    private void Update()
+
+    public void ShoutInsult()
+    {
+        int randomRange = UnityEngine.Random.Range(0, voiceClips.Length);
+        audioSource.clip = voiceClips[randomRange];
+        audioSource.Play();
+    }
+
+    /*private void Update()
     {
         timePassed += Time.deltaTime;
 
@@ -30,5 +37,5 @@ public class PlayVoices : MonoBehaviour
             audioSource.Play();
             timePassed = 0f;
         }
-    }
+    }*/
 }

@@ -47,7 +47,7 @@ public class GetCollectible : MonoBehaviour
             ui.GetComponentInChildren<PartitionCounter>().AddPartition();
             ui.GetComponent<AudioSource>().Play();
             collectibleItemSet.CollectedItems.Add(uniqueID.ID);
-            other.GetComponentInParent<Inventory>().AddItem(itemName);
+            globalObject.GetComponentInParent<Inventory>().AddItem(itemName);
             gameObject.SetActive(false);
         }
     }

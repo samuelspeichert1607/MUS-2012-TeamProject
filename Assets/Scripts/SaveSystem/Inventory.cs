@@ -5,9 +5,12 @@ public class Inventory : MonoBehaviour
 {
     public List<Item> Items { get; set; }
 
+    private GameObject audienceParent;
 
     private void Start()
     {
+        audienceParent = GameObject.Find("-- Audience Parent --");
+
         Items = new List<Item>();
         GameEvents.SaveInitiated();
     }
@@ -21,6 +24,11 @@ public class Inventory : MonoBehaviour
         Items.Add(itemToAdd);
         GameEvents.OnItemAddedToInventory(itemToAdd);
         Debug.Log("Item Added");
+
+        if(audienceParent!= null)
+        {
+            audienceParent.GetComponent<AudienceManager>().AddNewNumberOfPartitions(1);
+        }
     }
 
     public void AddItems(List<Item> items)

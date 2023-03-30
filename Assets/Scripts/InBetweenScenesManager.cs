@@ -50,6 +50,4 @@ public class InBetweenScenesManager : MonoBehaviour
         Debug.Log("Entrance into new Scene Start");
     }
     
-
-
 }
