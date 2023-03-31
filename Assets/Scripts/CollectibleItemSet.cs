@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class CollectibleItemSet : MonoBehaviour
 {
+    private const string Key = "CollectedItems";
+
     public HashSet<string> CollectedItems { get; private set; } = new HashSet<string>();
 
     private void Awake()
@@ -11,16 +13,16 @@ public class CollectibleItemSet : MonoBehaviour
         Load();
     }
 
-    void Save()
+    private void Save()
     {
-        SaveLoad.Save(CollectedItems, "CollectedItems");
+        SaveLoad.Save(CollectedItems, Key);
     }
 
-    void Load()
+    private void Load()
     {
-        if (SaveLoad.SaveExists("CollectedItems"))
+        if (SaveLoad.SaveExists(Key))
         {
-            CollectedItems = SaveLoad.Load<HashSet<string>>("CollectedItems");
+            CollectedItems = SaveLoad.Load<HashSet<string>>(Key);
         }
     }
 }

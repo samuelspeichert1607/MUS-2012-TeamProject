@@ -1,16 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class AudienceManager : MonoBehaviour
 {
+    [SerializeField]
+    private AudioClip crowdCheer;
+
     private GameObject[] spectators;
     private AudioSource bruitFoule;
     private int partitionCount;
-
     private void Start()
     {
         partitionCount = GetPartitionCount();
         bruitFoule = GameObject.Find("bruit_foule").GetComponent<AudioSource>();
+        spectators = GameObject.FindGameObjectsWithTag("Spectator");
         SetLevelOfCrowdReaction();
     }
 
@@ -39,12 +44,44 @@ public class AudienceManager : MonoBehaviour
                 LowerVolumeCrowdTo(0.1f);
                 break;
             case 5:
-                //IncitateSpectatorsToYellInsults(15, 30);
-                LowerVolumeCrowdTo(0);
-                //Applause
+                LowerVolumeCrowdTo(1f);
+                ChangeAnimationOfAudienceToApplause();
+                bruitFoule.GetComponent<AudioSource>().clip = crowdCheer;
+                bruitFoule.GetComponent<AudioSource>().Play();
                 break;
             default:
                 break;
+        }
+    }
+
+    private void ChangeAnimationOfAudienceToApplause()
+    {
+        for (int i = 0; i < spectators.Length; i++)
+        {
+            Animation animation = spectators[i].GetComponent<Animation>();
+            string animationClipName = ChooseRandomAnimationClip();
+            animation.clip = animation.GetClip(animationClipName);
+            animation.Play();
+        }
+    }
+
+    private string ChooseRandomAnimationClip()
+    {
+        int clipIndex = Random.Range(0,5);
+        switch (clipIndex)
+        {
+            case 0:
+                return "celebration";
+            case 1:
+                return "celebration2";
+            case 2:
+                return "celebration3";
+            case 3:
+                return "applause";
+            case 4:
+                return "applause2";
+            default:
+                return "applause";
         }
     }
 
@@ -55,7 +92,6 @@ public class AudienceManager : MonoBehaviour
 
     private void IncitateSpectatorsToYellInsults(int minValueOfInsults, int maxValueOfInsults)
     {
-        spectators = GameObject.FindGameObjectsWithTag("Spectator");
 
         float randomDelay1 = Random.Range(minValueOfInsults, maxValueOfInsults);
         float randomDelay2 = 0;
@@ -66,8 +102,10 @@ public class AudienceManager : MonoBehaviour
         }
         while (randomDelay2 == randomDelay1);
 
-        InvokeRepeating("ChooseASpectatorToShoutInsult", 0.0f, randomDelay1);
-        InvokeRepeating("ChooseASpectatorToShoutInsult", 0.0f, randomDelay2);
+        /*InvokeRepeating("ChooseASpectatorToShoutInsult", 0.1f, randomDelay1);
+        InvokeRepeating("ChooseASpectatorToShoutInsult", 0.1f, randomDelay2);*/
+        StartCoroutine(ChooseASpectatorToShoutInsult(partitionCount, randomDelay1));
+        StartCoroutine(ChooseASpectatorToShoutInsult(partitionCount, randomDelay2));
     }
 
     private int GetPartitionCount()
@@ -76,11 +114,15 @@ public class AudienceManager : MonoBehaviour
         return globalObject.GetComponent<Inventory>().Items.Count;
     }
 
-    private void ChooseASpectatorToShoutInsult()
+    private IEnumerator ChooseASpectatorToShoutInsult(int partitionCountAtThatTime, float delay)
     {
-        int random = Random.Range(0, spectators.Length);
-        GameObject chosenSpectator  = spectators[random];
-        chosenSpectator.GetComponent<PlayVoices>().ShoutInsult();
+        while (partitionCountAtThatTime != partitionCount)
+        {
+            yield return new WaitForSeconds(delay);
+            int random = Random.Range(0, spectators.Length);
+            GameObject chosenSpectator = spectators[random];
+            chosenSpectator.GetComponent<PlayVoices>().ShoutInsult();
+        }
     }
     
     public void AddNewNumberOfPartitions(int newNumberOfPartitions)

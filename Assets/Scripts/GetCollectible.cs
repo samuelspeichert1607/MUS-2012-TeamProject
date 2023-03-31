@@ -11,14 +11,11 @@ public class GetCollectible : MonoBehaviour
     private CollectibleItemSet collectibleItemSet;
     private UniqueID uniqueID;
 
-    private void Awake()
+    private void Start()
     {
         ui = GameObject.Find("PartitionsRamasseesText");
         globalObject = GameObject.Find("GlobalObject");
-    }
 
-    private void Start()
-    {
         uniqueID = GetComponent<UniqueID>();
         database = FindObjectOfType<ItemDatabase>();
         collectibleItemSet = FindObjectOfType<CollectibleItemSet>();
@@ -26,6 +23,10 @@ public class GetCollectible : MonoBehaviour
         {
             Destroy(this.gameObject);
             return;
+        }
+        else
+        {
+            Debug.Log("Doublon potentiel de " + uniqueID.ID );
         }
 
     }
