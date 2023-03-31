@@ -21,7 +21,7 @@ public class GetCollectible : MonoBehaviour
         collectibleItemSet = FindObjectOfType<CollectibleItemSet>();
         if (collectibleItemSet.CollectedItems.Contains(uniqueID.ID))
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
         else

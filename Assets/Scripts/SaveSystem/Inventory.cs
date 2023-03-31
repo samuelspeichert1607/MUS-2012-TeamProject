@@ -5,18 +5,25 @@ public class Inventory : MonoBehaviour
 {
     public List<Item> Items { get; set; }
 
+    private const string AudienceParentName = "-- Audience Parent --";
     private GameObject audienceParent;
 
     private void Start()
     {
-        audienceParent = GameObject.Find("-- Audience Parent --");
-
         Items = new List<Item>();
         GameEvents.SaveInitiated();
     }
 
     [SerializeField]
     private ItemDatabase database;
+
+    private void Update()
+    {
+        if(audienceParent == null)
+        {
+            audienceParent = GameObject.Find(AudienceParentName);
+        }
+    }
 
     public void AddItem(string itemName)
     {

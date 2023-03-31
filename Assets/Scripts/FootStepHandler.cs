@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class FootStepHandler : MonoBehaviour
@@ -16,6 +17,8 @@ public class FootStepHandler : MonoBehaviour
     private PlayerMovement playerMovement;
 
     public float normalSpeed;
+
+    private bool isWalking = false;
     
     private void Start()
     {
@@ -37,37 +40,28 @@ public class FootStepHandler : MonoBehaviour
                 break;
         }
 
-        audioSource.enabled = false;
-        ///InvokeRepeating("PlayStepsSounds", 0.0f, 2000f);
+        StartCoroutine(PlayStepsSounds());
     }
 
     private void Update()
     {
         float speed = playerMovement.GetVelocityMagnitude();
         bool isGrounded = playerMovement.Grounded;
-
-        int randomSoundIndex = Random.Range(0, currentFootstepSounds.Length - 1);
-
-
-        if (speed > 0 && isGrounded)
-        {
-            audioSource.mute = false;
-            audioSource.pitch = speed / normalSpeed;
-            audioSource.enabled = true;
-            audioSource.clip = currentFootstepSounds[randomSoundIndex];
-            audioSource.Play();
-            audioSource.enabled = false;
-        }
-        else
-        {
-            audioSource.mute = true;
-        }
+        isWalking = (speed > 0 && isGrounded) ? true : false;
     }
 
-    private void PlayStepsSounds()
+    private IEnumerator PlayStepsSounds()
     {
-        int random = Random.Range(0, currentFootstepSounds.Length);
-        audioSource.clip = currentFootstepSounds[random];
-        audioSource.Play();
+        while (true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            if (isWalking)
+            {
+                int random = Random.Range(0, currentFootstepSounds.Length);
+                audioSource.clip = currentFootstepSounds[random];
+                audioSource.Play();
+            }
+        }
     }
+    
 }
