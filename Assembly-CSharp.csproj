@@ -53,6 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FootStepHandler.cs" />
+    <Compile Include="Assets\Scripts\AudienceManager.cs" />
     <Compile Include="Assets\Scripts\InBetweenScenesManager.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\ItemDatabase.cs" />
     <Compile Include="Assets\Scripts\EnemyAi.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Assets\Scripts\UniqueID.cs" />
     <Compile Include="Assets\Scripts\WrapToLevel.cs" />
     <Compile Include="Assets\Scripts\GameEvents.cs" />
-    <Compile Include="Assets\AudienceManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Packages\Assets Charles\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />

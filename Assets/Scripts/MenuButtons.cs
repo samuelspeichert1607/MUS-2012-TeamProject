@@ -6,7 +6,17 @@ public class MenuButtons : MonoBehaviour
 	[SerializeField]
 	private string sceneName;
 
-    RectTransform rectTransform;
+    private RectTransform rectTransform;
+
+
+    [SerializeField]
+    private GameObject mainCanvas;
+
+    [SerializeField]
+    private GameObject controlsCanvas;
+
+    [SerializeField]
+    private GameObject creditsCanvas;
 
     public void Awake()
     {
@@ -20,6 +30,25 @@ public class MenuButtons : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Controls()
+    {
+        controlsCanvas.SetActive(true);
+        mainCanvas.SetActive(false);
+    }
+
+    public void Credits()
+    {
+        creditsCanvas.SetActive(true);
+        mainCanvas.SetActive(false);
+    }
+
+    public void Back()
+    {
+        mainCanvas.SetActive(true);
+        controlsCanvas.SetActive(false);
+        creditsCanvas.SetActive(false);
     }
 
     private void OnMouseEnter()

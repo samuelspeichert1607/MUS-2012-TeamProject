@@ -16,6 +16,8 @@ public class FootStepHandler : MonoBehaviour
 
     private PlayerMovement playerMovement;
 
+    private Animator animator;
+
     public float normalSpeed;
 
     private bool isWalking = false;
@@ -24,6 +26,7 @@ public class FootStepHandler : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         playerMovement = GetComponentInParent<PlayerMovement>();
+        animator = GameObject.Find("Mummy_Mon").GetComponent<Animator>();
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
