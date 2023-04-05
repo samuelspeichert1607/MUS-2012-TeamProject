@@ -163,9 +163,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 13062431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501f8c81d4e9c0d418a87bc0a8415140, type: 3}
+  m_Script: {fileID: 11500000, guid: 9da6e5c4d4b93dc409384c55a088ec2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myFx: {fileID: 284999629}
+  hoverFx: {fileID: 8300000, guid: 142a116ba003e9e46bc0ea76535e8c53, type: 3}
+  clickFx: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
 --- !u!1 &22816441
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -577,11 +580,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 1c44b835101de1145a44f5f7fa20d0fd, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -648,7 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -656,11 +659,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 1c44b835101de1145a44f5f7fa20d0fd, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4667,7 +4670,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4875,7 +4878,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5147,7 +5150,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    m_Font: {fileID: 12800000, guid: 1c44b835101de1145a44f5f7fa20d0fd, type: 3}
     m_FontSize: 35
     m_FontStyle: 2
     m_BestFit: 0
@@ -6197,9 +6200,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 953828677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501f8c81d4e9c0d418a87bc0a8415140, type: 3}
+  m_Script: {fileID: 11500000, guid: 9da6e5c4d4b93dc409384c55a088ec2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myFx: {fileID: 316767964}
+  hoverFx: {fileID: 8300000, guid: 142a116ba003e9e46bc0ea76535e8c53, type: 3}
+  clickFx: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
 --- !u!1 &964513113
 GameObject:
   m_ObjectHideFlags: 0
@@ -6855,7 +6861,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8789,7 +8795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8797,11 +8803,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 1c44b835101de1145a44f5f7fa20d0fd, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -8864,7 +8870,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9109,9 +9115,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1684851594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501f8c81d4e9c0d418a87bc0a8415140, type: 3}
+  m_Script: {fileID: 11500000, guid: 9da6e5c4d4b93dc409384c55a088ec2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myFx: {fileID: 1353695897}
+  hoverFx: {fileID: 8300000, guid: 142a116ba003e9e46bc0ea76535e8c53, type: 3}
+  clickFx: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
 --- !u!1 &1733261597
 GameObject:
   m_ObjectHideFlags: 0
@@ -9152,9 +9161,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1733261597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501f8c81d4e9c0d418a87bc0a8415140, type: 3}
+  m_Script: {fileID: 11500000, guid: 9da6e5c4d4b93dc409384c55a088ec2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myFx: {fileID: 1643522371}
+  hoverFx: {fileID: 8300000, guid: 142a116ba003e9e46bc0ea76535e8c53, type: 3}
+  clickFx: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
 --- !u!1 &1755907942
 GameObject:
   m_ObjectHideFlags: 0
@@ -9297,7 +9309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9305,11 +9317,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 1c44b835101de1145a44f5f7fa20d0fd, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0

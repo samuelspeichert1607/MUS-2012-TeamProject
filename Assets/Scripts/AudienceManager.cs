@@ -116,7 +116,7 @@ public class AudienceManager : MonoBehaviour
 
     private IEnumerator ChooseASpectatorToShoutInsult(int partitionCountAtThatTime, float delay)
     {
-        while (partitionCountAtThatTime != partitionCount)
+        while (partitionCountAtThatTime == partitionCount)
         {
             yield return new WaitForSeconds(delay);
             int random = Random.Range(0, spectators.Length);

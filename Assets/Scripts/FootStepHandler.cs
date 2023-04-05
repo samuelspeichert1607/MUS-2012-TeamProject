@@ -57,7 +57,7 @@ public class FootStepHandler : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.7f);
             if (isWalking)
             {
                 int random = Random.Range(0, currentFootstepSounds.Length);

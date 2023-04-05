@@ -38,7 +38,7 @@ public class GetCollectible : MonoBehaviour
             ui = GameObject.Find("PartitionsRamasseesText");
         }
 
-        transform.Rotate(Vector3.right * 50 * Time.deltaTime, Space.World);
+        gameObject.transform.Rotate(Vector3.right * 50 * Time.deltaTime, Space.World);
     }
 
     private void OnTriggerEnter(Collider other)
