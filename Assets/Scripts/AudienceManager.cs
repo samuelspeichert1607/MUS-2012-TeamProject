@@ -101,9 +101,7 @@ public class AudienceManager : MonoBehaviour
             randomDelay2 = Random.Range(minValueOfInsults, maxValueOfInsults);
         }
         while (randomDelay2 == randomDelay1);
-
-        /*InvokeRepeating("ChooseASpectatorToShoutInsult", 0.1f, randomDelay1);
-        InvokeRepeating("ChooseASpectatorToShoutInsult", 0.1f, randomDelay2);*/
+        
         StartCoroutine(ChooseASpectatorToShoutInsult(partitionCount, randomDelay1));
         StartCoroutine(ChooseASpectatorToShoutInsult(partitionCount, randomDelay2));
     }
@@ -114,11 +112,19 @@ public class AudienceManager : MonoBehaviour
         return globalObject.GetComponent<Inventory>().Items.Count;
     }
 
-    private IEnumerator ChooseASpectatorToShoutInsult(int partitionCountAtThatTime, float delay)
+    private IEnumerator ChooseASpectatorToShoutInsult(int partitions, float delay)
     {
+        int partitionCountAtThatTime = partitions;
+
         while (partitionCountAtThatTime == partitionCount)
         {
             yield return new WaitForSeconds(delay);
+
+            if (partitionCountAtThatTime != partitionCount)
+            {
+                break;
+            }
+
             int random = Random.Range(0, spectators.Length);
             GameObject chosenSpectator = spectators[random];
             chosenSpectator.GetComponent<PlayVoices>().ShoutInsult();

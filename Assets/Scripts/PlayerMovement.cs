@@ -82,9 +82,6 @@ public class PlayerMovement : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
-
-
-        animator.SetFloat(parameterSpeed, horizontalInput);
     }
 
     private void MovePlayer()
@@ -94,12 +91,15 @@ public class PlayerMovement : MonoBehaviour
 
         // on ground
         if (Grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-
+            animator.speed = moveDirection.magnitude > 0 ? 1 : 0 ;
+        }
         // in air
         else if (!Grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
-
+        }
 
     }
 

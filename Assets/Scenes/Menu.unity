@@ -5089,9 +5089,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 439266285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501f8c81d4e9c0d418a87bc0a8415140, type: 3}
+  m_Script: {fileID: 11500000, guid: 9da6e5c4d4b93dc409384c55a088ec2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myFx: {fileID: 535165490}
+  hoverFx: {fileID: 8300000, guid: 142a116ba003e9e46bc0ea76535e8c53, type: 3}
+  clickFx: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
 --- !u!1 &494678201
 GameObject:
   m_ObjectHideFlags: 0
@@ -5803,9 +5806,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 812220737}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501f8c81d4e9c0d418a87bc0a8415140, type: 3}
+  m_Script: {fileID: 11500000, guid: 9da6e5c4d4b93dc409384c55a088ec2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myFx: {fileID: 1979014444}
+  hoverFx: {fileID: 8300000, guid: 142a116ba003e9e46bc0ea76535e8c53, type: 3}
+  clickFx: {fileID: 8300000, guid: 4463e423c374be94a8481b479b2be466, type: 3}
 --- !u!1 &844412489
 GameObject:
   m_ObjectHideFlags: 0
