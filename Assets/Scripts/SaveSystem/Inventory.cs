@@ -6,7 +6,11 @@ public class Inventory : MonoBehaviour
     public List<Item> Items { get; set; }
 
     private const string AudienceParentName = "-- Audience Parent --";
+    private const string NonDiegeticalMusicName = "nonDiegeticalMusic";
+    private const string PierreOlivierName = "PierreOlivier";
     private GameObject audienceParent;
+    private GameObject nonDiegeticalMusic;
+    private GameObject pierreOlivier;
 
     private void Start()
     {
@@ -23,6 +27,16 @@ public class Inventory : MonoBehaviour
         {
             audienceParent = GameObject.Find(AudienceParentName);
         }
+
+        if (nonDiegeticalMusic == null)
+        {
+            nonDiegeticalMusic = GameObject.Find(NonDiegeticalMusicName);
+        }
+
+        if (pierreOlivier == null)
+        {
+            pierreOlivier = GameObject.Find(PierreOlivierName);
+        }
     }
 
     public void AddItem(string itemName)
@@ -32,9 +46,19 @@ public class Inventory : MonoBehaviour
         GameEvents.OnItemAddedToInventory(itemToAdd);
         Debug.Log("Item Added");
 
-        if(audienceParent!= null)
+        if(audienceParent != null)
         {
             audienceParent.GetComponent<AudienceManager>().AddNewNumberOfPartitions(1);
+        }
+
+        if (nonDiegeticalMusic != null)
+        {
+            nonDiegeticalMusic.GetComponent<NonDiegeticalMusicManager>().AddNewNumberOfPartitions(1);
+        }
+
+        if (pierreOlivier != null)
+        {
+            pierreOlivier.GetComponent<CryingPO>().AddNewNumberOfPartitions(1);
         }
     }
 

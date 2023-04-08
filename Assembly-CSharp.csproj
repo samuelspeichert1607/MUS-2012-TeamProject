@@ -58,7 +58,8 @@
     <Compile Include="Assets\Scripts\SaveSystem\ItemDatabase.cs" />
     <Compile Include="Assets\Scripts\EnemyAi.cs" />
     <Compile Include="Assets\Scripts\CollectibleItemSet.cs" />
-    <Compile Include="Assets\DeleteByItself.cs" />
+    <Compile Include="Assets\Scripts\DeleteByItself.cs" />
+    <Compile Include="Assets\Scripts\FindCamera.cs" />
     <Compile Include="Assets\Packages\Assets Charles\@PaulosCreations\FloatingPots\Scripts\FloatingController.cs" />
     <Compile Include="Assets\Scripts\PartitionCounter.cs" />
     <Compile Include="Assets\Scripts\HittedByPlayer.cs" />
@@ -75,7 +76,8 @@
     <Compile Include="Assets\Scripts\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\PlayVoices.cs" />
     <Compile Include="Assets\Scripts\CryingPO.cs" />
-    <Compile Include="Assets\GenerateTears.cs" />
+    <Compile Include="Assets\Scripts\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\GenerateTears.cs" />
     <Compile Include="Assets\Packages\Reversed Interactive\The Portal Collection\Scripts\SimpleCameraControllerPortals.cs" />
     <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\GetCollectible.cs" />
@@ -93,8 +95,7 @@
     <Compile Include="Assets\Scripts\UniqueID.cs" />
     <Compile Include="Assets\Scripts\WrapToLevel.cs" />
     <Compile Include="Assets\Scripts\GameEvents.cs" />
-    <Compile Include="Assets\Scripts\Dialogue.cs" />
-    <Compile Include="Assets\FindCamera.cs" />
+    <Compile Include="Assets\Scripts\NonDiegeticalMusicManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Packages\Assets Charles\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />

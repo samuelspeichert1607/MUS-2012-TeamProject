@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,6 +10,7 @@ public class AudienceManager : MonoBehaviour
     private GameObject[] spectators;
     private AudioSource bruitFoule;
     private int partitionCount;
+
     private void Start()
     {
         partitionCount = GetPartitionCount();
