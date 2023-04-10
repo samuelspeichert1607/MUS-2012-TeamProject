@@ -6,15 +6,19 @@ public class Inventory : MonoBehaviour
     public List<Item> Items { get; set; }
 
     private const string AudienceParentName = "-- Audience Parent --";
-    private const string NonDiegeticalMusicName = "nonDiegeticalMusic";
+    private const string NonDiegeticalMusicName = "nonDiegeticalMusic(Clone)";
     private const string PierreOlivierName = "PierreOlivier";
     private GameObject audienceParent;
     private GameObject nonDiegeticalMusic;
     private GameObject pierreOlivier;
 
-    private void Start()
+    private void Awake()
     {
         Items = new List<Item>();
+    }
+
+    private void Start()
+    {
         GameEvents.SaveInitiated();
     }
 

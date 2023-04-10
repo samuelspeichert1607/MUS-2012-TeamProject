@@ -6,6 +6,7 @@ public class InBetweenScenesManager : MonoBehaviour
 
     private static bool spawnOnce = false;
     
+
     [SerializeField]
     private GameObject player;
 
@@ -21,6 +22,9 @@ public class InBetweenScenesManager : MonoBehaviour
     [SerializeField]
     private GameObject ItemDatabase;
 
+    [SerializeField]
+    private GameObject NonDiegeticalMusic;
+
     private void Awake()
     {
         Debug.Log("Entrance into new Scene Awake");
@@ -32,6 +36,7 @@ public class InBetweenScenesManager : MonoBehaviour
             Instantiate(CMFreeLook);
             Instantiate(CameraHolder);
             Instantiate(ItemDatabase);
+            Instantiate(NonDiegeticalMusic);
             spawnOnce = true;
         }
 
