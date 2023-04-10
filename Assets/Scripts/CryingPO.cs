@@ -7,7 +7,7 @@ public class CryingPO : MonoBehaviour
     private AudioClip[] cryingSounds;
 
     [SerializeField]
-    private AudioClip happySound;
+    private AudioClip[] happySounds;
 
     [SerializeField]
     private GameObject beginningCanvas;
@@ -69,12 +69,13 @@ public class CryingPO : MonoBehaviour
             int random = Random.Range(0, cryingSounds.Length);
             audioSource.clip = cryingSounds[random];
             audioSource.Play();
-        }
+        }   
     }
 
     private void PlayWahey()
     {
-        audioSource.clip = happySound;
+        int random = Random.Range(0, happySounds.Length);
+        audioSource.clip = happySounds[random];
         audioSource.Play();
     }
 
